@@ -12,6 +12,7 @@ router.use("/categories", categoriesRoutes);
 router.use("/specifications", specificationsRoutes);
 router.use("/users", usersRoutes);
 router.use("/cars", carsRoutes);
+router.use("/images", carsRoutes);
 router.use(authenticateRoutes);
 
 export { router };
