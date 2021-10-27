@@ -27,7 +27,7 @@ describe("Create Category Controller", () => {
     await connection.close();
   });
 
-  it("Should be able to list all categories", async () => {
+  it("should be able to list all categories ", async () => {
     const responseToken = await request(app).post("/sessions").send({
       email: "admin@rentx.com.br",
       password: "admin",
@@ -46,8 +46,6 @@ describe("Create Category Controller", () => {
       });
 
     const response = await request(app).get("/categories");
-
-    console.log(response.body);
 
     expect(response.status).toBe(200);
     expect(response.body.length).toBe(1);
