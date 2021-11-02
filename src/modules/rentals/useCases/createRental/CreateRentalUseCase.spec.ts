@@ -45,7 +45,7 @@ describe("Create a Rental", () => {
   });
 
   it("should not be able to create a new rental if there is another open to the same user", async () => {
-    const car = await rentalsRepositoryInMemory.create({
+    await rentalsRepositoryInMemory.create({
       car_id: "1111",
       expected_return_date: dayAdd24Hours,
       user_id: "12345",
